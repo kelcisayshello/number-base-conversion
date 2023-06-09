@@ -1,0 +1,14 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+body {
+    padding: 20px;
+}
+
+.footer {
+    background-color: #FFF;
+}
+
+.forms-container {
+    width: 50%;
+    margin: 0 auto;
+}
