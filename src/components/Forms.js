@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "../css/Forms.css"
 
 class Forms extends Component {
 
@@ -34,7 +34,7 @@ class Forms extends Component {
     
             // (2) converting numbers
             decimal_input[0].value = parseInt(hex, 16);    // (*) hex to decimal
-            binary_input[0].value = parseInt(hex, 16).toString(2).padStart(8, '0');    // (*) hex to decimal
+            binary_input[0].value = parseInt(hex, 16).toString(2);    // (*) hex to decimal
         }
 
         return (
@@ -45,7 +45,7 @@ class Forms extends Component {
                         <p className="help">Decimal</p>
                     </div>
                     <div className="control">
-                        <button className="button is-info">Convert</button>
+                        <button className="button is-info convert-dec">Convert</button>
                     </div>
                 </form>
 
@@ -55,7 +55,7 @@ class Forms extends Component {
                         <p className="help">Binary</p>
                     </div>
                     <div className="control">
-                        <button className="button is-info">Convert</button>
+                        <button className="button is-info convert-bin">Convert</button>
                     </div>
                 </form>
 
@@ -65,7 +65,7 @@ class Forms extends Component {
                         <p className="help">Hexadecimal</p>
                     </div>
                     <div className="control">
-                        <button className="button is-info">Convert</button>
+                        <button className="button is-info convert-hex">Convert</button>
                     </div>
                 </form>
 

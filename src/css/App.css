@@ -1,21 +1,24 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;700&display=swap');
 
 html {
     overflow: none;
-
-
 }
+
 body {
-    padding: 20px;
+    padding: 10px;
     overflow: none;
 }
 
 .footer {
     background-color: #FFF;
     position: absolute;
-    bottom: 5px;
+    bottom: 0px;
     margin: 0 auto;
     width: 100%;
+
+    font-weight: 300;
+    font-family: 'Geologica', sans-serif;
 }
 
 .forms-container {
@@ -23,7 +26,17 @@ body {
     margin: 0 auto;
 }
 
-.content {
+.tool-description {
     width: 80%;
-    margin: 20px auto 10px;
+    margin: 20px auto 40px;
+    border-radius: 4px;
+    background: rgba(109, 139, 87, 0.45);
+    padding: 22px;
+    color: #3D5030;
+}
+
+h1 {
+    font-weight: 300;
+    font-family: 'Geologica', sans-serif;
+    margin: 20px auto;
 }
