@@ -1,63 +1,49 @@
 import React, { Component } from "react";
 
+
 class Forms extends Component {
 
     render() {
-        let input_dec = document.getElementById("decimalID");
 
-        function foo() {
-            console.log(input_dec.value)
+        const decimalSubmit = (e) => {
+            e.preventDefault();
+            let decimal = e.target.name_decimal.value;    // (1) get value from "Decimal" input field
+            decimal = Number(decimal);  // (2) convert value from String to Number type
+
+            let binary_input = document.getElementsByName("name_binary");   // (3) get access to "Binary" text field
+            binary_input[0].value = decimal.toString(2);    // (4) convert number to binary and set "Binary" input field value
         }
 
-        // function dectobin(x) {
-        //     let bin = 0;
-        //     let rem, i = 1, step = 1;
-        //     while (x != 0) {
-        //         rem = x % 2;
-        //         // console.log(
-        //         //     `Step ${step++}: ${x}/2, Remainder = ${rem}, Quotient = ${parseInt(x / 2)}`
-        //         // );
-        //         x = parseInt(x / 2);
-        //         bin = bin + rem * i;
-        //         i = i * 10;
-        //     }
-        //     console.log(`Binary: ${bin}`);
-        // }
+        const binarySubmit = (e) => {
+            e.preventDefault();
+            let binary = e.target.name_binary.value;    // (1) get value from "Binary" input field
+            binary = Number(binary);  // (2) convert value from String to Number type
 
-        // take input
-        // let number = prompt('Enter a decimal number: ');
-
-        // convertToBinary(number);
-
-        // function bar() {
-        //     console.log("bar")
-        // }
+            let decimal_input = document.getElementsByName("name_decimal");   // (3) get access to "Decimal" text field
+            decimal_input[0].value = parseInt(binary, 2);    // (4) convert number to decimal and set "Decimal" input field value
+        }
 
         return (
             <div>
-                <div class="field has-addons">
-                    <div class="control is-expanded">
-                        <input id="decimalID" class="input" type="text" placeholder="Enter a decimal number" />
-                        <p class="help">Decimal</p>
+                <form onSubmit={decimalSubmit} className="field has-addons">
+                    <div className="control is-expanded">
+                        <input name="name_decimal" className="input" type="text" placeholder="Enter a decimal number"/>
+                        <p className="help">Decimal</p>
                     </div>
-                    <div class="control">
-                        <button class="button is-info" onClick={foo}>
-                            Convert
-                        </button>
+                    <div className="control">
+                        <button className="button is-info">Convert</button>
                     </div>
-                </div>
+                </form>
 
-                <div class="field has-addons">
-                    <div class="control is-expanded">
-                        <input id="binaryID" class="input" type="text" placeholder="Enter a binary number" />
-                        <p class="help">Binary</p>
+                <form onSubmit={binarySubmit} className="field has-addons">
+                    <div className="control is-expanded">
+                        <input name="name_binary" className="input" type="text" placeholder="Enter a binary number"/>
+                        <p className="help">Binary</p>
                     </div>
-                    <div class="control">
-                        <button class="button is-info">
-                            Convert
-                        </button>
+                    <div className="control">
+                        <button className="button is-info">Convert</button>
                     </div>
-                </div>
+                </form>
 
             </div>
         );
