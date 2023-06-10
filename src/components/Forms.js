@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../css/Forms.css"
 
 class Forms extends Component {
-
     render() {
         let binary_input = document.getElementsByName("name_binary"), 
         hex_input = document.getElementsByName("name_hex"), 
@@ -34,7 +33,7 @@ class Forms extends Component {
     
             // (2) converting numbers
             decimal_input[0].value = parseInt(hex, 16);    // (*) hex to decimal
-            binary_input[0].value = parseInt(hex, 16).toString(2);    // (*) hex to decimal
+            binary_input[0].value = parseInt(hex, 16).toString(2);    // (*) hex to binary
         }
 
         return (
