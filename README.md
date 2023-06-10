@@ -22,10 +22,16 @@ Last updated 10 June 2023.
 
 ### Behind the math.
 #### Decimal
-> A **dec·i·mal** refers to any set of numbers which can be represented using infinite combination of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9. Decimals are denoted with a log base of 10.
+> A **dec·i·mal** refers to the set of infinite combinations using the digits 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9. Decimals have a log base of 10.
 * 120 is a decimal
 * 0 is also a decimal
 * 0.23092 is actually also a decimal
+In JavaScript, we can convert any decimal to binary using the `toString(x)` function, replacing the `x` with 2 to denote it's log base.
+```JavaScript
+let decimal = 4;
+let binary = decimal.toString(2);
+console.log(binary) // 100
+```
 
 <br>
 
@@ -34,12 +40,25 @@ Last updated 10 June 2023.
 * 100 is the binary representation for 4
 * 1 is the binary representation for 1
 * 101011001 is the binary representation for 345
+We can convert any binary number into a decimal using JavaScript's `parseInt(x, y)` function, replacing the `x` with the number to be converted and the `y` with 2 to denote the log base number `x` is currently in.
+```JavaScript
+let binary = 100;
+let decimal = parseInt(binary, 2);
+console.log(decimal) // 4
+```
+
+We can also convert any binary number into a hexadecimal still using a combination of JavaScript's `parseInt(x, y)` and `toString(z)` functions, replacing the `z` with 16 to denote it's log base.
+```JavaScript
+let binary = 11011;
+let hex = parseInt(binary, 2).toString(16);
+console.log(hex) // 1B
+```
 
 <br>
 
 
 #### Hexadecimal
-> A **hex·a·dec·i·mal** number refers to a number's representation using alphanumeric combinations of digits 0 through 9 and letters A through F (case insensitive). Hexadecimal numbers have a log base of 16.
+> A **hex·a·dec·i·mal** number is an alphanumeric combinations of digits 0 through 9 and letters A through F (case insensitive). Hexadecimal numbers have a log base of 16.
 * FFF is a hexadecimal number
 * 4AB9EF is a hexadecimal number
 * 222222 is also a hexadecimal number
