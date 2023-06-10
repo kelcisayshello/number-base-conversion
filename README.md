@@ -79,7 +79,7 @@ let decimal = parseInt(hex, 16);
 console.log(decimal) // 4095
 ```
 
-We can also convert any hexadecimla number into a binary using a combination of JavaScript's `parseInt(x, y)` and `toString(z)` functions, replacing the `y` with 2 and the `z` with 16 respectively.
+We can also convert any hexadecimla number into a binary using a combination of JavaScript's `parseInt(x, y)` and `toString(z)` functions, replacing the `y` with 16 and the `z` with 2 respectively.
 ```JavaScript
 let hex = "2AE156";
 let binary = parseInt(hex, 16).toString(2);
