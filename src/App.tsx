@@ -15,7 +15,7 @@ function App() {
       </div>
 
       <p className="footer has-text-centered is-size-6-desktop is-size-6-tablet is-size-7-mobile">
-        Made with React and Bulma &nbsp; <i className="fa-solid fa-leaf"></i> &nbsp; <Link to="https://www.github.com/k3nsah" target="_blank" rel="noopener noreferrer" >@k3nsah</Link>
+        Made with React and Bulma &nbsp; <i className="fa-solid fa-leaf"></i> &nbsp; <Link to="https://www.github.com/kelcisayshello" target="_blank" rel="noopener noreferrer" >@kelcisayshello</Link>
       </p>
     </div>
   )
