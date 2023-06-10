@@ -34,6 +34,13 @@ let binary = decimal.toString(2);
 console.log(binary) // 100
 ```
 
+We can also convert any decimal into a hexadecimal using the `toString(x)` function, replacing the `x` with 16 to denote it's log base.
+```JavaScript
+let decimal = 365;
+let hex = decimal.toString(16);
+console.log(hex) // "16D"
+```
+
 <br>
 
 #### Binary
@@ -49,11 +56,11 @@ let decimal = parseInt(binary, 2);
 console.log(decimal) // 4
 ```
 
-We can also convert any binary number into a hexadecimal still using a combination of JavaScript's `parseInt(x, y)` and `toString(z)` functions, replacing the `z` with 16 to denote it's log base.
+We can also convert any binary number into a hexadecimal using a combination of JavaScript's `parseInt(x, y)` and `toString(z)` functions, replacing the `z` with 16 to denote it's log base.
 ```JavaScript
 let binary = 11011;
 let hex = parseInt(binary, 2).toString(16);
-console.log(hex) // 1B
+console.log(hex) // "1B"
 ```
 
 <br>
@@ -65,3 +72,16 @@ console.log(hex) // 1B
 * 4AB9EF is a hexadecimal number
 * 222222 is also a hexadecimal number
 
+We can convert any hexadecimal number into a decimal using JavaScript's `parseInt(x, y)` function, replacing the `x` with the number to be converted and the `y` with 16 to denote the log base number `x` is currently in.
+```JavaScript
+let hex = "FFF";
+let decimal = parseInt(hex, 16);
+console.log(decimal) // 4095
+```
+
+We can also convert any hexadecimla number into a binary using a combination of JavaScript's `parseInt(x, y)` and `toString(z)` functions, replacing the `y` with 2 and the `z` with 16 respectively.
+```JavaScript
+let hex = "2AE156";
+let binary = parseInt(hex, 16).toString(2);
+console.log(binary) // 001010101110000101010110
+```
