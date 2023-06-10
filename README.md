@@ -26,6 +26,7 @@ Last updated 10 June 2023.
 * 120 is a decimal
 * 0 is also a decimal
 * 0.23092 is actually also a decimal
+
 In JavaScript, we can convert any decimal to binary using the `toString(x)` function, replacing the `x` with 2 to denote it's log base.
 ```JavaScript
 let decimal = 4;
@@ -40,6 +41,7 @@ console.log(binary) // 100
 * 100 is the binary representation for 4
 * 1 is the binary representation for 1
 * 101011001 is the binary representation for 345
+
 We can convert any binary number into a decimal using JavaScript's `parseInt(x, y)` function, replacing the `x` with the number to be converted and the `y` with 2 to denote the log base number `x` is currently in.
 ```JavaScript
 let binary = 100;
