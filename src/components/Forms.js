@@ -4,14 +4,18 @@ import React, { Component } from "react";
 class Forms extends Component {
 
     render() {
+        let binary_input = document.getElementsByName("name_binary"), 
+        hex_input = document.getElementsByName("name_hex"), 
+        decimal_input = document.getElementsByName("name_decimal");
 
         const decimalSubmit = (e) => {
             e.preventDefault();
             let decimal = e.target.name_decimal.value;    // (1) get value from "Decimal" input field
             decimal = Number(decimal);  // (2) convert value from String to Number type
 
-            let binary_input = document.getElementsByName("name_binary");   // (3) get access to "Binary" text field
-            binary_input[0].value = decimal.toString(2);    // (4) convert number to binary and set "Binary" input field value
+            // (3) converting numbers
+            binary_input[0].value = decimal.toString(2);    // (*) decimal to binary
+            hex_input[0].value = decimal.toString(16);  // (*) decimal to hex
         }
 
         const binarySubmit = (e) => {
@@ -19,8 +23,18 @@ class Forms extends Component {
             let binary = e.target.name_binary.value;    // (1) get value from "Binary" input field
             binary = Number(binary);  // (2) convert value from String to Number type
 
-            let decimal_input = document.getElementsByName("name_decimal");   // (3) get access to "Decimal" text field
-            decimal_input[0].value = parseInt(binary, 2);    // (4) convert number to decimal and set "Decimal" input field value
+            // (3) converting numbers
+            decimal_input[0].value = parseInt(binary, 2);    // (*) binary to decimal
+            hex_input[0].value = parseInt(binary, 2).toString(16);  // (*) binary to hex
+        }
+
+        const hexSubmit = (e) => {
+            e.preventDefault();
+            let hex = e.target.name_hex.value;    // (1) get value from "Hexadecimal" input field
+    
+            // (2) converting numbers
+            decimal_input[0].value = parseInt(hex, 16);    // (*) hex to decimal
+            binary_input[0].value = parseInt(hex, 16).toString(2).padStart(8, '0');    // (*) hex to decimal
         }
 
         return (
@@ -39,6 +53,16 @@ class Forms extends Component {
                     <div className="control is-expanded">
                         <input name="name_binary" className="input" type="text" placeholder="Enter a binary number"/>
                         <p className="help">Binary</p>
+                    </div>
+                    <div className="control">
+                        <button className="button is-info">Convert</button>
+                    </div>
+                </form>
+
+                <form onSubmit={hexSubmit} className="field has-addons">
+                    <div className="control is-expanded">
+                        <input name="name_hex" className="input" type="text" placeholder="Enter a hexadecimal number"/>
+                        <p className="help">Hexadecimal</p>
                     </div>
                     <div className="control">
                         <button className="button is-info">Convert</button>
