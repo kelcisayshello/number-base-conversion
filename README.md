@@ -2,7 +2,6 @@
 Last updated 10 June 2023.
 
 <br>
-<br>
 
 
 ### Set up.
@@ -19,7 +18,6 @@ Last updated 10 June 2023.
 ```
 
 <br>
-<br>
 
 
 ### Behind the math.
@@ -29,12 +27,20 @@ Last updated 10 June 2023.
 * 0 is also a decimal
 * 0.23092 is actually also a decimal
 
+<br>
+
 #### Binary
 > A **bi·na·ry** number refers to a number's representation using only 0's and 1's. Binary numbers have a log base of 2.
 * 100 is the binary representation for 4
 * 1 is the binary representation for 1
 * 101011001 is the binary representation for 345
 
+<br>
+
+
 #### Hexadecimal
 > A **hex·a·dec·i·mal** number refers to a number's representation using alphanumeric combinations of digits 0 through 9 and letters A through F (case insensitive). Hexadecimal numbers have a log base of 16.
+* FFF is a hexadecimal number
+* 4AB9EF is a hexadecimal number
+* 222222 is also a hexadecimal number
 
