@@ -5,7 +5,7 @@ import "./css/App.css"
 function App() {
   return (
     <div className="page-container">
-      <h1 className="has-text-centered is-size-3-desktop is-size-3-tablet is-size-4-mobile">Number Base Conversion</h1>
+      <h1 className="has-text-centered is-size-3-desktop is-size-3-tablet is-size-4-mobile">Number Base Converter</h1>
 
       <p className="tool-description">When we think of numbers, we often think of their decimal representation using a combination of digits 0 through 9. But numbers can be represented and used in other ways as well. This simple tool uses JavaScript functionality to convert numbers into their different representations. Try it!
       </p>

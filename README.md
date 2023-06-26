@@ -16,6 +16,7 @@
 ```bash
 > npm start
 ```
+![visual of web tool UI](image.png)
 
 <br>
 
